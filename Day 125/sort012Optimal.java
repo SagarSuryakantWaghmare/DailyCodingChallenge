@@ -2,6 +2,8 @@
  * sort012Brute
  */
 public class sort012Optimal {
+    // Here we do the optimal solution :
+    // We count the number of 0s, 1s and 2s in the
     public static void swap(int []arr,int start,int end){
         int temp=arr[start];
         arr[start]=arr[end];

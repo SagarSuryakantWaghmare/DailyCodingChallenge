@@ -1,5 +1,4 @@
-# DailyCodingChallenge
-I'm committed to improving my coding skills, and I prove it by tackling a daily coding challenge with consistency and dedication.
+
 # Daily Coding Challenge - Java Problem Solving
 
 Welcome to the **Daily Coding Challenge** repository! This challenge aims to improve your **problem-solving skills** in **Java** by practicing consistently every day. By solving problems daily, you'll develop discipline, improve your coding habits, and gradually enhance your ability to tackle coding challenges.

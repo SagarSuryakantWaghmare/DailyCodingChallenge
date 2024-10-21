@@ -24,5 +24,4 @@ Welcome to the **Daily Coding Challenge** repository! This challenge aims to imp
 - Solutions must be committed before midnight (your local time).
 - If you miss a day, try not to skip it—solve the problem as soon as possible, but maintain consistency.
 
-## Folder Structure
 

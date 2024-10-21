@@ -13,7 +13,7 @@ public class summaryRanges {
         int start=arr[0];
         int end=arr[0];
         for(int i=1;i<arr.length;i++){
-            if(arr[i]==start+1){
+            if(arr[i]==end+1){
                 end=arr[i];
             }
             else{
@@ -23,9 +23,10 @@ public class summaryRanges {
                 else{
                     sRange.add(start+"->"+end);
                 }
-            }
-            start=arr[i];
+                start=arr[i];
             end=arr[i];
+            }
+            
         }
         if(start==end){
             sRange.add(String.valueOf(start));

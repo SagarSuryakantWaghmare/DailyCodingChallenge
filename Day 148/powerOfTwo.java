@@ -6,7 +6,7 @@ public class powerOfTwo {
     // public static boolean isPowerOfTwo(int n){
     //     if(n==0) return true;
     //     for(int i=1;i<31;i++){
-    //         int result=(int)i*i;
+    //         int result=(int)Math.pow(2,i);
     //         if(result==n){
     //             return true;
     //         }

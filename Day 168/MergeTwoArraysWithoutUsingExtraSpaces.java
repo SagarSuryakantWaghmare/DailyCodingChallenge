@@ -1,33 +1,60 @@
+import java.util.Arrays;
+
 public class MergeTwoArraysWithoutUsingExtraSpaces {
+    // public static void merge(int arr1[],int arr2[],int n,int m){
+    //     int left=0;
+    //     int right=0;
+    //     int index=0;
+    //     int arr3[]=new int[n+m];
+    //     while (left<n&&right<m) {
+    //       if(arr1[left]<arr2[right]){
+    //         arr3[index]=arr1[left];
+    //         index++;
+    //         left++;
+    //       }
+    //       else{
+    //         arr3[index]=arr2[right];
+    //         index++;
+    //         right++;
+    //       }
+    //     }
+    //     while (left<n) {
+    //         arr3[index]=arr1[left];
+    //         index++;
+    //         left++;
+    //     }
+    //     while (right<m) {
+    //         arr3[index++]=arr2[right++];
+    //     }
+    //     for(int i=0;i<arr3.length-1;i++){
+    //         if(i<n) arr1[i]=arr3[i];
+    //         else arr2[i-n]=arr3[i];
+    //     }
+    // }
+
+    // Optimal Solution
     public static void merge(int arr1[],int arr2[],int n,int m){
-        int left=0;
+        int left=n-1;
         int right=0;
-        int index=0;
-        int arr3[]=new int[n+m];
-        while (left<n&&right<m) {
-          if(arr1[left]<arr2[right]){
-            arr3[index]=arr1[left];
-            index++;
-            left++;
-          }
-          else{
-            arr3[index]=arr2[right];
-            index++;
-            right++;
-          }
+        while (left>=0&&right<m) {
+            if(arr1[left]>arr2[right]){
+                swap(left,right,arr1,arr2);
+                left--;
+                right++;
+            }
+            else{
+                break;
+            }
         }
-        while (left<n) {
-            arr3[index]=arr1[left];
-            index++;
-            left++;
-        }
-        while (right<m) {
-            arr3[index++]=arr2[right++];
-        }
-        for(int i=0;i<arr3.length-1;i++){
-            if(i<n) arr1[i]=arr3[i];
-            else arr2[i-n]=arr3[i];
-        }
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+    }
+
+    public static void swap(int left,int right,int arr1[],int arr2[]){
+        int temp=arr1[left];
+        arr1[left]=arr2[right];
+        arr2[right]=temp;
+
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 public class MaximumSubarray {
     public static int maxSubArray(int[] nums) {
+        // Adding the base case
         if(nums.length==1) return nums[0];
         int lastSum=Integer.MIN_VALUE;
         int currSum=0;

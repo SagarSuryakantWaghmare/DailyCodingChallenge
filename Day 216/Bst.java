@@ -18,7 +18,6 @@ public class Bst {
         if(root.val<=minValue||root.val>=maxValue) return false;
         return isValid(root.left, minValue, root.val)&&
         isValid(root.right, root.val, maxValue);
-
     }
 
     public static void main(String[] args) {

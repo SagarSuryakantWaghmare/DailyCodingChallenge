@@ -1,6 +1,5 @@
 import java.util.*;
 
-// Removed unused imports: javax.management.Query, javax.swing.tree.TreeNode
 public class levelOrderTraversal {
 
     public static class ListNode {
@@ -23,7 +22,7 @@ public class levelOrderTraversal {
     }
 
     public static List<List<Integer>> levelOrder(ListNode root) {
-        Queue<ListNode> queue = new LinkedList<>(); // Use ListNode instead of TreeNode
+        Queue<ListNode> queue = new LinkedList<>(); 
         List<List<Integer>> wrap = new LinkedList<>();
 
         if (root == null) return wrap;
@@ -33,11 +32,9 @@ public class levelOrderTraversal {
         while (!queue.isEmpty()) {
             int levelNum = queue.size();
             List<Integer> sub = new LinkedList<>();
-
             for (int i = 0; i < levelNum; i++) {
-                ListNode current = queue.poll(); 
-                sub.add(current.val); 
-
+                ListNode current = queue.poll();
+                sub.add(current.val);
                 if (current.left != null) queue.offer(current.left);
                 if (current.right != null) queue.offer(current.right);
             }

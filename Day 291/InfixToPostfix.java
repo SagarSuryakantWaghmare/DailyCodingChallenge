@@ -46,5 +46,6 @@ public class InfixToPostfix {
     public static void main(String[] args) {
         String s = "a+b*(c^d-c)";
         System.out.println("Postfix: " + postfix(s)); // Expected: "abcd^c-*+"
+        System.out.println("Infix to postfix");
     }
 }
